@@ -1,7 +1,33 @@
 <html>
-<head> My code </html>
+<head> My code </head>
+<style>
+	#div_box {width:155px;height:155px;padding:10px;border:3px solid #bbbbbb;}
+	#div_img {margin-left:auto;margin-right:auto}
+</style>
+<script>
+	function allow(eve)
+	{
+		eve.preventDefault();
+	}
+
+	function drag(eve)
+	{
+		eve.dataTransfer.setData("text",eve.target.id);
+	}
+
+	function drop(eve)
+	{
+		eve.preventDefault();
+		var data = eve.dataTransfer.getData("text");
+		eve.target.appendChild(document.getElementById(data));
+	}
+</script>
 <body>
 <H1> Personal Details form </H1>
+<div id="div_box" ondrop="drop(event)" ondragover="allow(event)"></div>
+<br>
+<div id="div_img" class="div_img">
+<img id="Ps I Love You" src="Smile.jpg" alt="no image" draggable="true" ondragstart="drag(event)" width="150" height="150"></div>
 <form>
 Name: <input type="text" name="name"><br>
 Age: <input type="text" name="ID"><br>
@@ -9,14 +35,15 @@ Gender:<br> <input type="radio" name="gender" value="male"> Male<br>
 		<input type="radio" name="gender" value="Female"> Female<br>
 Grade in 10th: 
 		0%<input type="range" id="percent" value="50">100%
-		=<output name="Grade" for="percent" ></output>
+		<output name="Grade" for="percent" ></output>
 		<br/>
 		City: <select name="City"><br>
 		<option value="Bangalore">Bangalore</option>
 		<option value="San Jose">San Jose</option>
 		<option value="Mumbai">Mumbai</option>
 		<br/>
-		<input type="submit" value="submit">
+		<input type="submit" name="submit" value="submit">
 </form>
+
 </body>
-</head>
+</html>
