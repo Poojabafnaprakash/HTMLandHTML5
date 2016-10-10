@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<Head>FORM</head>
+<BODY>
+<form>
+  <fieldset>
+    <legend>Personal data</legend>
+    Name: <input type="text" name="name" placeholder="first name"></input></br></br>
+Password: <input type="password" name="password" required></input></br></br>
+<input type="submit" name="submit" value="Send"></input>
+  </fieldset>
+<fieldset>
+  <legend>Preferences</legend>
+  Fruits: <input type="checkbox" name="fruits" value="apple">Apple</input>
+<input type="checkbox" name="fruits" value="apple">Mango</input>
+<input type="checkbox" name="fruits" value="apple">Grape</input>
+</br></br>
+Gender: <input type="radio" name="gender" value="male">Male</input>
+<input type="radio" name="gender" value="female">Female</input>
+<input type="radio" name="gender" value="other" checked>Other</input></br></br>
+TextArea: <textarea name="textarea" rows="5" cols="30"></textarea>
+</br></br>
+Drop down:<select name="drop">
+  <option value="MS">MS</option>
+  <option value="BE">BE</option>
+  <option value="PUC" selected>PUC</option>
+</select>
+</br></br>
+DataList for schools:<input list="schools">
+<datalist id="schools">
+  <option value="BGHS">BGHS</option>
+  <option value="VIT" >VIT</option>
+  <option value="NMKIT">NMKIT</option>
+</datalist></input></br></br>
+Quantity:<input type="number" name="howmuch" min="0" max="5">
+</br></br>
+Date of Birth:<input type="date" name="bday"></br></br>
+Favorite color:<input type="color" name"favcolor">
+</br></br>
+Range of knowledge in HTML: <input type="range" name="ratehtml" min="0" max="10">
+</br></br>
+Time:<input type="time" name="utime">
+</br></br>
+Email:<input type="email" name="email" required>
+</br></br>
+Select files:<input type="file" name="files" multiple>
+</br></br>
+</fieldset>
+</form>
+</BODY>
+</HTML>
